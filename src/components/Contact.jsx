@@ -11,8 +11,36 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router";
+import { useRef, useState } from "react";
+import emailjs from "emailjs-com";
+import toast from "react-hot-toast";
 
 const Contact = () => {
+  const formRef = useRef(null);
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSending(true);
+    emailjs
+      .sendForm(
+        "service_1kexp7m", // replace with your EmailJS service ID
+        "template_irmt76u", // replace with your EmailJS template ID
+        formRef.current,
+        "lRlc_r_pw78bcMUAu" // replace with your EmailJS user/public key
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully!");
+          formRef.current.reset();
+        },
+        () => {
+          toast.error("Failed to send message. Please try again.");
+        }
+      )
+      .finally(() => setSending(false));
+  };
+
   return (
     <div
       className="page"
@@ -52,7 +80,7 @@ const Contact = () => {
                 <span className="block opacity-80 uppercase font-normal">
                   mail me
                 </span>
-                steve@mail.com
+                amir.nageh15@gmail.com
               </div>
               <div className="relative font-Open-sans font-semibold pl-50 pt-5 leading-lh-21 text-fs-15 xs:text-fs-14 mb-16">
                 <FontAwesomeIcon
@@ -62,12 +90,13 @@ const Contact = () => {
                 <span className="block opacity-80 uppercase font-normal">
                   call me
                 </span>
-                +216 21 184 010
+                +201024517052
               </div>
               <ul className="-ml-5 pt-4 mb-48">
                 <li className="inline-block">
                   <NavLink
-                    href="#"
+                    to="https://www.facebook.com/amir.nageh15"
+                    target="_blank"
                     className="social-item inline-block h-40 w-40 leading-lh-42 text-center text-white transition duration-300 text-fs-17 mx-6 bg-black-2 rounded-full"
                   >
                     <FontAwesomeIcon icon={faFacebookF} />
@@ -75,7 +104,8 @@ const Contact = () => {
                 </li>
                 <li className="inline-block">
                   <NavLink
-                    href="#"
+                    to="https://www.instagram.com/amir.nageh/"
+                    target="_blank"
                     className="social-item inline-block h-40 w-40 leading-lh-42 text-center text-white transition duration-300 text-fs-17 mx-6 bg-black-2 rounded-full"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
@@ -83,7 +113,8 @@ const Contact = () => {
                 </li>
                 <li className="inline-block">
                   <NavLink
-                    href="#"
+                    to="https://x.com/amirnageh15"
+                    target="_blank"
                     className="social-item inline-block h-40 w-40 leading-lh-42 text-center text-white transition duration-300 text-fs-17 mx-6 bg-black-2 rounded-full"
                   >
                     <FontAwesomeIcon icon={faXTwitter} />
@@ -91,7 +122,8 @@ const Contact = () => {
                 </li>
                 <li className="inline-block">
                   <NavLink
-                    href="#"
+                    to="https://www.linkedin.com/in/amirnageh/"
+                    target="_blank"
                     className="social-item inline-block h-40 w-40 leading-lh-42 text-center text-white transition duration-300 text-fs-17 mx-6 bg-black-2 rounded-full"
                   >
                     <FontAwesomeIcon icon={faLinkedinIn} />
@@ -104,8 +136,9 @@ const Contact = () => {
               <form
                 id="contactform"
                 className="contactform"
-                method="post"
-                action=" "
+                ref={formRef}
+                onSubmit={handleSubmit}
+                autoComplete="off"
               >
                 <div className="flex flex-wrap font-normal">
                   <div className="from-sm:w-1/3 down-sm:w-full px-16 xs:px-0">
@@ -114,6 +147,7 @@ const Contact = () => {
                       type="text"
                       name="name"
                       placeholder="YOUR NAME"
+                      required
                     />
                   </div>
                   <div className="from-sm:w-1/3 down-sm:w-full px-16 xs:px-0">
@@ -122,6 +156,7 @@ const Contact = () => {
                       type="email"
                       name="email"
                       placeholder="YOUR EMAIL"
+                      required
                     />
                   </div>
                   <div className="from-sm:w-1/3 down-sm:w-full px-16 xs:px-0">
@@ -130,32 +165,30 @@ const Contact = () => {
                       type="text"
                       name="subject"
                       placeholder="YOUR SUBJECT"
+                      required
                     />
                   </div>
                   <div className="w-full px-16 xs:px-0">
                     <textarea
                       className="bg-black-3 w-full text-white border border-solid border-black h-160 py-12 px-26 overflow-hidden rounded-30 outline-0 transition duration-300 field-form placeholder:text-placeholder"
+                      name="message"
                       placeholder="YOUR MESSAGE"
+                      required
                     ></textarea>
                   </div>
-                  <div className="w-full px-16 xs:px-0 mt-30">
+                  <div className="w-full px-16 xs:px-0 mt-30 mb-50">
                     <button
                       type="submit"
                       className="button overflow-hidden inline-block leading-lh-1.4 rounded-30 text-ellipsis text-center align-middle select-none transition-all duration-250 ease-in-out uppercase no-underline relative z-10 py-16 pr-70 pl-35 text-fs-15 font-semibold text-white bg-transparent outline-0 before:absolute before:-z-10 before:left-0 before:right-0 before:top-0 before:bottom-0 before:translate-x-full hover:before:translate-x-0 before:transition before:duration-300 before:ease-out"
+                      disabled={sending}
                     >
                       <span className="relative z-20 text-white">
-                        send message
+                        {sending ? "Sending..." : "send message"}
                       </span>
                       <span className="absolute -right-px bottom-0 w-55 h-55 flex items-center justify-center rounded-full text-white text-fs-19 bg-accent">
                         <FontAwesomeIcon icon={faPaperPlane} />
                       </span>
                     </button>
-                  </div>
-                  <div className="w-full px-16 xs:px-0">
-                    <span
-                      id="message"
-                      className="output_message h-0 text-center leading-lh-46 rounded-30 text-white block [&.success]:h-46 [&.success]:bg-success [&.error]:h-46 [&.error]:bg-error mt-30 mb-60"
-                    ></span>
                   </div>
                 </div>
               </form>

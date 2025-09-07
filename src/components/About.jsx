@@ -6,6 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router";
 import CvLink from "../assets/cv.pdf";
+import HeroImg from "../assets/images/d2.png";
 
 const About = () => {
   return (
@@ -35,7 +36,7 @@ const About = () => {
               </h3>
               <img
                 className="hidden xs:block rounded-full border-4 border-solid border-black-3 w-230 h-230 mb-25 mx-auto"
-                src="assets/img/dark-img-mobile.jpg"
+                src={HeroImg}
                 alt=""
               />
               <div className="flex justify-between xs:justify-start font-Open-sans capitalize">
@@ -118,7 +119,7 @@ const About = () => {
             <div className="xl:basis-1/2 lg:basis-7/12 down-lg:basis-full down-lg:mt-50">
               <div className="flex down-lg:-mx-15 flex-wrap">
                 <div className="w-1/2 px-15">
-                  <div className="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-20 pl-40 xs:pl-25 border border-black-3 rounded-5 mb-30 xs:mb-25">
+                  <div className="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-0 pl-40 xs:pl-0 border border-black-3 rounded-5 mb-30 xs:mb-25">
                     <h3 className="relative inline-block font-bold text-fs-50 xs:text-fs-40 text-accent leading-lh-1.2 after:content-['+'] after:absolute after:-right-24 after:text-fs-33 after:font-light after:top-2">
                       10
                     </h3>
@@ -128,7 +129,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="w-1/2 px-15">
-                  <div className="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-20 pl-40 xs:pl-25 border border-black-3 rounded-5 mb-30 xs:mb-25">
+                  <div className="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-0 pl-40 xs:pl-0 border border-black-3 rounded-5 mb-30 xs:mb-25">
                     <h3 className="relative inline-block font-bold text-fs-50 xs:text-fs-40 text-accent leading-lh-1.2 after:content-['+'] after:absolute after:-right-24 after:text-fs-33 after:font-light after:top-2">
                       3000
                     </h3>
@@ -138,7 +139,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="w-1/2 px-15">
-                  <div className="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-20 pl-40 xs:pl-25 border border-black-3 rounded-5">
+                  <div className="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-0 pl-40 xs:pl-0 border border-black-3 rounded-5">
                     <h3 className="relative inline-block font-bold text-fs-50 xs:text-fs-40 text-accent leading-lh-1.2 after:content-['+'] after:absolute after:-right-24 after:text-fs-33 after:font-light after:top-2">
                       1000
                     </h3>
@@ -148,7 +149,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="w-1/2 px-15">
-                  <div className="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-20 pl-40 xs:pl-25 border border-black-3 rounded-5">
+                  <div className="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-0 pl-40 xs:pl-0 border border-black-3 rounded-5">
                     <h3 className="relative inline-block font-bold text-fs-50 xs:text-fs-40 text-accent leading-lh-1.2 after:content-['+'] after:absolute after:-right-24 after:text-fs-33 after:font-light after:top-2">
                       5
                     </h3>
@@ -246,7 +247,7 @@ const About = () => {
                 </div>
               </div>
               <h6 className="uppercase font-Open-sans text-center mt-24 xs:mt-8">
-                Vue
+                VueJs
               </h6>
             </div>
             <div className="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
@@ -259,6 +260,102 @@ const About = () => {
               </div>
               <h6 className="uppercase font-Open-sans text-center mt-24 xs:mt-8">
                 react
+              </h6>
+            </div>
+            <div className="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+              <div className="c100 p90 float-none mx-auto bg-black-3">
+                <span>90%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
+              <h6 className="uppercase font-Open-sans text-center mt-24 xs:mt-8">
+                NextJs
+              </h6>
+            </div>
+            <div className="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+              <div className="c100 p60 float-none mx-auto bg-black-3">
+                <span>60%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
+              <h6 className="uppercase font-Open-sans text-center mt-24 xs:mt-8">
+                NodeJs
+              </h6>
+            </div>
+            <div className="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+              <div className="c100 p85 float-none mx-auto bg-black-3">
+                <span>85%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
+              <h6 className="uppercase font-Open-sans text-center mt-24 xs:mt-8">
+                agile
+              </h6>
+            </div>
+            <div className="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+              <div className="c100 p87 float-none mx-auto bg-black-3">
+                <span>87%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
+              <h6 className="uppercase font-Open-sans text-center mt-24 xs:mt-8">
+                Tailwind Css
+              </h6>
+            </div>
+            <div className="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+              <div className="c100 p80 float-none mx-auto bg-black-3">
+                <span>80%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
+              <h6 className="uppercase font-Open-sans text-center mt-24 xs:mt-8">
+                Figma & Adobe XD
+              </h6>
+            </div>
+            <div className="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+              <div className="c100 p95 float-none mx-auto bg-black-3">
+                <span>95%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
+              <h6 className="uppercase font-Open-sans text-center mt-24 xs:mt-8">
+                git & github & bitbucket
+              </h6>
+            </div>
+            <div className="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+              <div className="c100 p50 float-none mx-auto bg-black-3">
+                <span>50%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
+              <h6 className="uppercase font-Open-sans text-center mt-24 xs:mt-8">
+                c# & c++
+              </h6>
+            </div>
+            <div className="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+              <div className="c100 p50 float-none mx-auto bg-black-3">
+                <span>50%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
+              <h6 className="uppercase font-Open-sans text-center mt-24 xs:mt-8">
+                unity 3d
               </h6>
             </div>
           </div>
@@ -276,17 +373,21 @@ const About = () => {
                     <FontAwesomeIcon icon={faBriefcase} />
                   </div>
                   <span className="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
-                    2018 - Present
+                    2016 - Present
                   </span>
                   <h5 className="uppercase text-fs-18 mt-7 mb-10">
-                    web developer
+                    ThemeForest Author
                     <span className="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
                       envato
                     </span>
                   </h5>
                   <p className="font-Open-sans text-light-grey text-fs-14">
-                    Lorem ipsum dolor sit amet, consectetur tempor incididunt ut
-                    labore adipisicing elit,
+                    - Design and develop premium themes and templates for the
+                    ThemeForest marketplace.
+                  </p>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Maintain high customer satisfaction ratings through
+                    quality code and responsive support
                   </p>
                 </li>
                 <li className="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
@@ -294,17 +395,25 @@ const About = () => {
                     <FontAwesomeIcon icon={faBriefcase} />
                   </div>
                   <span className="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
-                    2013 - 2018
+                    2020 - 2022
                   </span>
                   <h5 className="uppercase text-fs-18 mt-7 mb-10">
-                    UI/UX Designer
+                    Front-End Supervisor
                     <span className="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
-                      Themeforest
+                      Jobed, kuwait
                     </span>
                   </h5>
                   <p className="font-Open-sans text-light-grey text-fs-14">
-                    Lorem ipsum dolor sit amet, consectetur tempor incididunt ut
-                    labore adipisicing elit,
+                    - Led front-end development initiatives and managed project
+                    timelines
+                  </p>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Collaborated with backend teams to integrate APIs and
+                    deliver seamless user experiences
+                  </p>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Mentored junior developers and established coding
+                    standards
                   </p>
                 </li>
                 <li className="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
@@ -312,17 +421,77 @@ const About = () => {
                     <FontAwesomeIcon icon={faBriefcase} />
                   </div>
                   <span className="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
-                    2005 - 2013
+                    2019 - 2021
                   </span>
                   <h5 className="uppercase text-fs-18 mt-7 mb-10">
-                    consultant
+                    Front-End Supervisor
                     <span className="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
-                      Videohive
+                      Smart Vision, Egypt
                     </span>
                   </h5>
                   <p className="font-Open-sans text-light-grey text-fs-14">
-                    Lorem ipsum dolor sit amet, consectetur tempor incididunt ut
-                    labore adipisicing elit,
+                    - Supervised multiple concurrent web development projects
+                  </p>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Coordinated with cross-functional teams to ensure timely
+                    project delivery
+                  </p>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Implemented modern front-end architectures and best
+                    practices
+                  </p>
+                </li>
+
+                <li className="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
+                  <div className="bg-accent w-40 h-40 absolute left-0 leading-lh-40 text-center z-10 rounded-full text-white">
+                    <FontAwesomeIcon icon={faBriefcase} />
+                  </div>
+                  <span className="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
+                    2018 - 2019
+                  </span>
+                  <h5 className="uppercase text-fs-18 mt-7 mb-10">
+                    Front-End Developer
+                    <span className="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
+                      Elryad Company, Egypt
+                    </span>
+                  </h5>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Developed interactive web interfaces using modern
+                    JavaScript frameworks
+                  </p>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Transformed UI/UX designs into pixel-perfect, responsive
+                    web pages
+                  </p>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Implemented complex JavaScript functionalities and user
+                    interactions
+                  </p>
+                </li>
+
+                <li className="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
+                  <div className="bg-accent w-40 h-40 absolute left-0 leading-lh-40 text-center z-10 rounded-full text-white">
+                    <FontAwesomeIcon icon={faBriefcase} />
+                  </div>
+                  <span className="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
+                    2016 - 2018
+                  </span>
+                  <h5 className="uppercase text-fs-18 mt-7 mb-10">
+                    Tech Lead
+                    <span className="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
+                      MoovStore, saudi arabia
+                    </span>
+                  </h5>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Managed and mentored a team of web developers
+                  </p>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Architected scalable front-end solutions for e-commerce
+                    platforms
+                  </p>
+                  <p className="font-Open-sans text-light-grey text-fs-14">
+                    - Established development workflows and quality assurance
+                    processes
                   </p>
                 </li>
               </ul>
@@ -334,17 +503,18 @@ const About = () => {
                     <FontAwesomeIcon icon={faGraduationCap} />
                   </div>
                   <span className="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
-                    2015
+                    2013 - 2017
                   </span>
                   <h5 className="uppercase text-fs-18 mt-7 mb-10">
-                    Engineer Degree
+                    Bachelor's Degree in Computer and Information Sciences
                     <span className="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
-                      Oxford University
+                      Mansoura University, Egypt
                     </span>
                   </h5>
                   <p className="font-Open-sans text-light-grey text-fs-14">
-                    Lorem ipsum dolor sit amet, consectetur tempor incididunt ut
-                    labore adipisicing elit,
+                    Graduated with a Bachelor's degree in Computer and
+                    Information Sciences from Mansoura University, Egypt, in
+                    2017.
                   </p>
                 </li>
                 <li className="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
@@ -352,35 +522,15 @@ const About = () => {
                     <FontAwesomeIcon icon={faGraduationCap} />
                   </div>
                   <span className="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
-                    2012
+                    2011 - 2013
                   </span>
                   <h5 className="uppercase text-fs-18 mt-7 mb-10">
-                    Master Degree
-                    <span className="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
-                      Kiev University
-                    </span>
+                    high school diploma
+                    <span className="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80"></span>
                   </h5>
                   <p className="font-Open-sans text-light-grey text-fs-14">
-                    Lorem ipsum dolor sit amet, consectetur tempor incididunt ut
-                    labore adipisicing elit,
-                  </p>
-                </li>
-                <li className="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
-                  <div className="bg-accent w-40 h-40 absolute left-0 leading-lh-40 text-center z-10 rounded-full text-white">
-                    <FontAwesomeIcon icon={faGraduationCap} />
-                  </div>
-                  <span className="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
-                    2009
-                  </span>
-                  <h5 className="uppercase text-fs-18 mt-7 mb-10">
-                    Bachelor Degree
-                    <span className="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
-                      Tunis High School
-                    </span>
-                  </h5>
-                  <p className="font-Open-sans text-light-grey text-fs-14">
-                    Lorem ipsum dolor sit amet, consectetur tempor incididunt ut
-                    labore adipisicing elit,
+                    Graduated with a High School Diploma from Elmansoura High
+                    School, Egypt, in 2013.
                   </p>
                 </li>
               </ul>

@@ -135,7 +135,6 @@ a {
   &:hover,
   &:visited,
   &:link {
-    text-decoration: none;
     outline: none;
     cursor: pointer;
   }
@@ -200,4 +199,12 @@ textarea {
   }
 
   resize: none;
+}
+
+.modal-image {
+  height: 400px;
+  object-fit: cover;
+  @media (max-width: 768px) {
+    height: 250px;
+  }
 }
